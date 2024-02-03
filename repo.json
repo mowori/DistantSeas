@@ -1,0 +1,26 @@
+[
+    {
+        "Author": "mowori",
+        "Name": "Distant Seas (but with spectral time)",
+        "InternalName": "DistantSeas",
+        "AssemblyVersion": "1.0.0.4",
+        "Description": "The ultimate Ocean Fishing plugin. Automatically suggests baits, logs each boat you're on, tracks progress to achievements, adds a global point leaderboard, and more!\n\nIcon from the Mutant Standard project.",
+        "ApplicableVersion": "any",
+        "RepoUrl": "https://github.com/mowori/DistantSeas",
+        "Tags": [
+            "ocean",
+            "fishing"
+        ],
+        "DalamudApiLevel": 9,
+        "LoadRequiredState": 0,
+        "LoadSync": false,
+        "CanUnloadAsync": false,
+        "LoadPriority": 0,
+        "IconUrl": "https://raw.githubusercontent.com/mowori/DistantSeas/main/Data/icon.png",
+        "Punchline": "The ultimate Ocean Fishing plugin.",
+        "AcceptsFeedback": true,
+        "DownloadLinkInstall": "https://github.com/mowori/DistantSeas/releases/download/v0.0.1/latest.zip",
+        "DownloadLinkUpdate": "https://github.com/mowori/DistantSeas/releases/download/v0.0.1/latest.zip",
+        "DownloadLinkTesting": "https://github.com/mowori/DistantSeas/releases/download/v0.0.1/latest.zip",
+    }
+]
