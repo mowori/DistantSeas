@@ -1,31 +1,12 @@
 [
     {
-        "Author": "mowori",
         "Name": "Distant Seas (but with spectral time)",
         "InternalName": "DistantSeasButWithSpectralTime",
-        "AssemblyVersion": "0.0.1",
         "Description": "idk what im doing i just forked it help",
-        "ApplicableVersion": "any",
         "RepoUrl": "https://github.com/mowori/DistantSeas",
-        "Tags": [
-            "ocean",
-            "fishing"
-        ],
-        "DalamudApiLevel": 9,
-        "LoadRequiredState": 0,
-        "LoadSync": false,
-        "CanUnloadAsync": false,
-        "LoadPriority": 0,
         "IconUrl": "https://raw.githubusercontent.com/mowori/DistantSeas/main/Data/icon.png",
-        "Punchline": "idk what im doing",
-        "AcceptsFeedback": true,
         "DownloadLinkInstall": "https://github.com/mowori/DistantSeas/releases/download/v0.0.1/latest.zip",
         "DownloadLinkUpdate": "https://github.com/mowori/DistantSeas/releases/download/v0.0.1/latest.zip",
-        "DownloadLinkTesting": "https://github.com/mowori/DistantSeas/releases/download/v0.0.1/latest.zip",
-        "DownloadCount": 1,
-        "LastUpdate": 1618608322,
-        "TestingAssemblyVersion": "0.0.1",
-        "IsHide": "False",
-        "IsTestingExclusive": "False"
+        "DownloadLinkTesting": "https://github.com/mowori/DistantSeas/releases/download/v0.0.1/latest.zip"
     }
 ]
