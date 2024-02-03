@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using DistantSeas.Common;
 
 namespace DistantSeas.Fishing;
@@ -14,6 +14,7 @@ public class DebugStateTracker : IStateTracker {
     public WeatherType CurrentWeather { get; set; } = WeatherType.ClearSkies;
     public float TimeLeftInZone { get; set; } = 60;
     public bool IsSpectralActive { get; set; } = false;
+    public float SpectralProcTime { get; set; } = 0;
 
     public List<MissionState> MissionState { get; set; } = new() {
         new MissionState(0),

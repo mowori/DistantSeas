@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using DistantSeas.Common;
 
@@ -15,6 +15,7 @@ public interface IStateTracker : IDisposable {
     public WeatherType CurrentWeather { get; }
     public float TimeLeftInZone { get; }
     public bool IsSpectralActive { get; }
+    public float SpectralProcTime { get; }
     public List<MissionState> MissionState { get; }
 
     public bool HasActionUnlocked(uint id);

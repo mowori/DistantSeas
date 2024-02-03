@@ -1,7 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Numerics;
+using System.Reflection;
 using System.Timers;
 using CheapLoc;
 using Dalamud.Game.ClientState.Conditions;
@@ -222,6 +224,11 @@ public class OverlayWindow : DistantSeasWindow {
             ImGui.TextUnformatted($"{mission.Objective}: {mission.Progress}/{mission.Total}");
             drewOne = true;
         }
+
+        var zoneTime = state.SpectralProcTime;
+        var timeStr = $"{(int) zoneTime / 60}:{(int) zoneTime % 60:00}";
+        if (zoneTime < 0) timeStr = "0:00";
+        ImGui.TextUnformatted($"Spectral proc time: {timeStr}");
 
         return drewOne;
     }
