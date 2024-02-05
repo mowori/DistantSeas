@@ -13,12 +13,14 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Content Include="../Data/**/*" CopyToOutputDirectory="PreserveNewest"/>
+        <Content Include="../Data/**/*" CopyToOutputDirectory="PreserveNewest" />
     </ItemGroup>
 
     <PropertyGroup>
         <DalamudLibPath>$(appdata)\XIVLauncher\addon\Hooks\dev\</DalamudLibPath>
         <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+        <AssemblyName>$(MSBuildProjectName)</AssemblyName>
+        <RootNamespace>$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
     </PropertyGroup>
 
     <PropertyGroup Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux)))'">

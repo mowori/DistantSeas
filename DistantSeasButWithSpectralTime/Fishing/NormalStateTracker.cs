@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using Dalamud.Plugin.Services;
 using DistantSeas.Common;
@@ -8,6 +8,7 @@ using FFXIVClientStructs.FFXIV.Client.Game.UI;
 using FFXIVClientStructs.FFXIV.Client.Graphics.Environment;
 using FFXIVClientStructs.FFXIV.Client.UI.Agent;
 using FFXIVClientStructs.FFXIV.Component.GUI;
+using ImGuiNET;
 using Lumina.Excel;
 using Lumina.Excel.GeneratedSheets;
 using Action = Lumina.Excel.GeneratedSheets.Action;
@@ -32,6 +33,7 @@ public unsafe class NormalStateTracker : IStateTracker {
     public WeatherType CurrentWeather { get; set; } = WeatherType.Unknown;
     public float TimeLeftInZone { get; set; } = 0;
     public bool IsSpectralActive { get; set; } = false;
+    public float SpectralProcTime { get; set; } = 0;
     public List<MissionState> MissionState { get; set; } = new();
 
     private ExcelSheet<Action> actionSheet;
@@ -120,6 +122,12 @@ public unsafe class NormalStateTracker : IStateTracker {
                                   oceanFishing->TimeOffset;
 
             this.IsSpectralActive = oceanFishing->SpectralCurrentActive;
+            if (this.IsSpectralActive && this.SpectralProcTime == 0) {
+                this.SpectralProcTime = this.TimeLeftInZone;
+            } else if (!this.IsSpectralActive && this.SpectralProcTime > 0) {
+                this.SpectralProcTime = 0;
+            }
+
 
             if (oceanFishing->Mission1Type != 0) {
                 if (this.MissionState.Count <= 0) {
